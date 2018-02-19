@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by chirovan5231 (http://jsbin.com/hukute/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="[G6-19.02.2018  ]">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+  <title> G - B</title>
+<style id="jsbin-css">
+;;top /* ==== A SIMPLE CSS RESET FROM ERIC MEYER ==== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+div {
+  box-sizing: border-box;
+  position: relative;
+  top:  15px;
+  left: 1px;
+}
+
+h3 {
+  color: rgba(1,900,0,.8);
+  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+  font-size: 35px;
+  letter-spacing: -.003em;
+  line-height: 1.58;
+}
+h4 {opacity: 3.0;}
+p100 {
+  text-align: left;
+  padding: 1rem;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.075rem;
+}
+#box-02
+ {
+ color: rgba(1,900,0,.8);
+  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+  font-size: 35px;
+  letter-spacing: -.003em;
+  line-height: 0.80;
+ }
+#box-01 {
+  background-color: hsla(2, 200%, 59%, .95);
+  width: 60rem;
+  height: 1rem;
+  box-shadow: 5px 3px 0 #000; 
+align:top;
+}
+h2 {text-align: center;
+    font-size: 25.5px;}
+
+#canvasA {background: linear-gradient(to bottom, #1e90ff 15%,#EEE 100%);}
+
+
+}
+/* CSS reset */
+
+* {
+  margin: 1;
+  padding: 2;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+/* Profile image */
+
+
+img {
+  margin-bottom: 160px;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px / 20px;
+  padding: 1px;
+  background-color: #666;
+  filter: grayscale(50%);
+  transition: all 1.5s ease-in-out;
+}
+
+img:hover {
+  filter: grayscale(10%);
+
+/*maresti miscarea cercului / patratului  */
+
+  transform: scale(3.0);
+}
+
+
+  .package {
+  
+  background-color: #eee;
+  text-align: center;
+ 
+}
+ 
+  .content {
+  padding: 1px;
+  background-color: #888;
+  clear: both;
+  margin-top: 0;
+  float: left;
+}
+
+@media (min-width: 768px) {
+
+	.main-header {
+			position: fixed;
+			top: 0;
+			height: 100%;
+			width: 33.3%;
+		}
+
+}
+/* Primary Content Wrapper Styles */
+
+@media (min-width: 48rem) {
+	.primary-content {
+		float: right;
+		width: 10.6%;
+		max-width: 812px;
+	}
+
+}
+
+
+@media (min-width: 20rem) {
+
+  .body {
+    display: inline-block;
+    border-bottom: none;
+    width: 7.5rem;
+  }}
+ @media (min-width: 30rem) {
+
+  .body {
+    display: inline-block;
+    border-bottom: none;
+    width: 7.5rem;
+  }}
+@media (min-width: 62rem) {
+
+  .body {
+    display: inline-block;
+    border-bottom: none;
+    width: 7.5rem;
+  }}
+
+@media (min-width: 64rem) {
+
+	.body {
+		float: none;
+		position: absolute;
+        left: 20.625%;
+	}
+
+}
+ @media (min-width: 75rem) {
+
+  .body {
+    display: inline-block;
+    border-bottom: none;
+    width: 7.5rem;
+  }}
+
+/*prima pagina -completata de o fotografie de fundal */
+
+.cover {
+    background: url('https://orange.codeberryschool.com/content/images/project-assets/page-header-bg.jpg') no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  color: hsla(0,0%,100%,.7);
+ font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+  display: table;
+                                           
+
+}
+
+.wrapper {
+    display: table-cell;
+  vertical-align: middle;
+    padding: 0 .625rem;
+}
+/* ==== GENERAL STYLES ==== */
+
+* {
+    box-sizing: border-box;
+}
+
+/* ====  STILIZAREA PENTRU BUTOANELE DE NAVIGARE SUPERIOAR  ==== */
+
+nav {
+  font-size: .5rem;
+  opacity: 1.5;
+  background: hsla(56, 100%, 50%, 0.3);
+}
+
+nav ul {
+  background-color: #125;
+  text-align: center;
+background: linear-gradient(to bottom, #0000ff 0%,#EEE 100%);
+  
+}
+   
+
+
+nav li {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.9rem;
+  line-height:1.5rem;
+  height:0.2rem;
+  border-bottom: 1.9rem solid #888;
+}
+
+nav a {
+  text-decoration: none;
+  color: #c74f78;
+  display: block;
+}
+
+nav a:hover {
+  background-color: #fff;
+  transition: background-color .3s ease-in-out;
+}
+
+nav a.active {
+  background-color: #c74f78;
+  color: #eee;
+}
+
+ @media (min-width: 37.5rem) {
+
+  nav li {
+    display: inline-block;
+    border-bottom: none;
+    width: 4.5rem;
+  }}
+
+/---STILIZAREA SECTIUNII faq__/
+.faq {
+  background: hsla(100,0%,0%,.6);;
+  color: #d2ba87;
+  width: 100vw;
+  text-align: center;
+}
+
+.faq h2 {
+  margin-top: 1rem; /* To even out top and bottom margins. */
+}
+
+.faq p {
+  font-family: 'Muli', sans-serif;
+  text-align: left;
+}
+
+.question-group::after {
+  content: "";
+  display: block;
+  height: .95rem;
+  width: 50vw;
+  margin: 1.5rem auto;
+  background-color: #d2ba87;
+}
+
+.question {
+  font-weight: 700;
+  margin-bottom: .55rem;
+}
+
+.answer {
+  margin-bottom: 1.5rem;
+}
+/===subsol==/
+footer {
+  background: url('https://orange.codeberryschool.com/content/images/project-assets/simple-footer.png') repeat center;
+  display: table;
+  width: 100vw;
+  height: 25rem;
+  text-align: center;
+  padding: 5rem;
+  font-family: 'Arial', sans-serif;
+  font-size: 2.075rem;
+
+.wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+  footer small {
+  color: #ccc;
+  letter-spacing: .025rem;
+  margin-bottom: 1.5rem;
+  text-align: right;
+   
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #c74f78;
+  margin: 0 1.5px;
+  display: inline-block;
+}
+/*efect de trecere a mausului */
+
+.footer-nav a:hover {
+  color: #f26896;
+  transition: color .15s ease-in-out;
+}
+strong {
+  font-weight: 100;
+}
+
+                                     
+</style>
+</head>
+
+
+<nav>
+    <ul>
+      <li><a href="https://vrei-garsoniera.github.io/CONTACT/" class="active">Contact</a></li>
+      <li><a href="https://vrei-garsoniera.github.io/SITUL1/">G1</a></li>
+      <li><a href="https://vrei-garsoniera.github.io/SITUL2/">G2</a></li>
+      <li><a href="https://vrei-garsoniera.github.io/SITUL3/">G3</a></li>
+      <li><a href="https://vrei-garsoniera.github.io/SITUL4/">G4</a></li>
+      <li><a href="https://vrei-garsoniera.github.io/SITUL5/">G5</a></li>
+      <li><a href="https://vrei-garsoniera.github.io/SITUL6/">G6</a></li>
+      <li><a href="https://vrei-garsoniera.github.io/SITUL7/">G7</a></li>
+      <li><a href="https://vrei-garsoniera.github.io/BUY-SELL/">BUY</a></li>
+      <li><a href="https://vrei-garsoniera.github.io/CONTACT/" class="active">Contact</a></li>
+    </ul>
+  </nav>
+<header class="cover">
+
+<p101><img src="https://i.imgur.com/sbAr9p5.jpg" alt="LOGO:vrei-garsoniera"></p101>
+
+<!--CONTOR VIZITATORI-->
+
+<script id="_waun16">var _wau = _wau || []; _wau.push(["tab", "60l9mbq2ss", "n16", "left-middle"]);</script><script async src="https://waust.at/t.js"></script>
+
+
+<div class="wrapper">
+                    <!--SLIDUL FOTO AUTOMAT-->
+
+                                <!--SLIDUL FOTO AUTOMAT -END-->
+      
+        <div class="byline">
+<div id="box-02"><p101>Garsoniera 6 este   mobilata</p101>
+</div>
+ <div id="box-01"><p100> INDISPONIBILA-inchiriata pana in luna IANUARIE 2019 </p100></div>
+ 
+          <h2>OFERTA ESTE LIMITATA IN TIMP </h2>
+          <h3> TARIF 0.000,00 LEI /LUNA </h3>
+          <h4> Fotografiile si detaliile le aveti mai jos </h4>
+        </div>
+         
+          </div>
+ 
+    </header>
+
+
+
+<div class="packages">
+       <div class="package">
+
+       <h3>Standard</h3>
+            
+
+<div id="canvasA">  
+<lu>
+ 
+<lu><img src="https://i.imgur.com/tNOG0CD.jpg" alt="foto1"></lu>
+ 
+<lu><img src="https://i.imgur.com/NaPWUe9.jpg" alt="Foto2"></lu>
+<lu><img src="https://i.imgur.com/t0nbwWz.jpg" alt="Foto3"></lu>
+<lu><img src="https://i.imgur.com/deS19fH.jpg" alt="Foto4"></lu>
+<lu><img src="https://i.imgur.com/NaPWUe9.jpg" alt="Foto5"></lu>
+<lu><img src="https://i.imgur.com/jgbi0eb.jpg" alt="Foto6"></lu>
+<lu><img src="https://i.imgur.com/NIsUwlb.jpg" alt="Foto13"></lu>
+
+<p> CONDITII IN VEDEREA INCHIRIERII : </p>
+<p> Accept persoane linistite si responsabile  care sa respecte vecinii  si programul de odihna  al asociatiei de proprietari. </p>
+<p>Se poate viziona cu un  telefon in prealabil. Daca nu reusesc sa va raspund pe moment va voi suna eu in cat mai scurt timp posibil.</p>
+<p> NU SUNT AGENTIE IMOBILIARA-nu se percep comisioane de intermediere .</p>
+</lu>
+</div>
+</div>
+
+
+<div class="package">
+     <div class="content">
+  <h1>PREZENTARE GARSONIERA </h1>
+  <p>Garsoniera este amplasata  in  imediata apropiere a Catedralei  - Bariera Calarasilor.  Dispune de tamplarie cu geamuri  tip termopan –reflexiv(transfer termic redus) interior si exterior, izolata termic cu polistiren (consumuri reduse la incalzire si racire) instalatii sanitare noi, flise si gresii noi   pe toata suprafata  garsonierei (inclusiv balcon); sistem de climatizare (aer conditionat –INVERTER )- NOU, usa metalica . Garsoniera este renovata in intregime in perioada aprilie –mai 2016. Are in dotare canapea 2 locuri, sifonier, comoda TV, masuta din sticla si electrocasnice noi +centrala termica. Interfon la scara. Se inchiriaza doar persoanelor ce vor respecat  programul de liniste al asociatiei de proprietari.<strong>EXCLUS PENTRU ANIMALE</strong> de companie de orice tip si marime. </p>
+   
+
+<p>...................</p> 
+
+
+</div>
+
+<div id="canvasB">  
+
+<lu>
+ 
+<lu><img src="https://i.imgur.com/nwKOBpb.jpg" alt="Foto7"></lu>
+<lu><img src="https://i.imgur.com/O6u3ahE.jpg" alt="Foto8"></lu>
+<lu><img src="https://i.imgur.com/sbw11Tu.jpg" alt="Foto9"></lu>
+<lu><img src="https://i.imgur.com/Z4BJMhc.jpg" alt="Foto10"></lu>
+<lu><img src="https://i.imgur.com/YdYpk1i.jpg" alt="Foto11"></lu>
+<lu><img src="https://i.imgur.com/9iRm9hH.jpg" alt="Foto12"></lu>
+<lu><img src="https://i.imgur.com/CQNsVy7.jpg" alt="Foto14"></lu>
+ 
+</lu>
+
+</div>
+</div>
+  
+</div>
+
+<div id="canvasC"> 
+<section class="faq">
+      <h2>Intrebari & Raspunsuri</h2>
+        <div class="question-group">
+          <h3>Imprejurimi/vecinatati</h3>
+            <p class="question">Ce magazine sunt ?</p>
+            <p class="answer">La 10 minute de mers pe jos gasiti Piata Concordia, iar la 2 minute demers gasiti Peny Market, Lidl, Pepco si Jisk.</p>
+            <p class="question">Unde putem parca autoturismul?</p>
+            <p class="answer">Parcarea se poate efectua chiar langa imobil sau in zona strazilor adiacente (in spatele magazinului Lidl). </p>
+            <p class="question">Ce posibilitati de transport in comun sunt?</p>
+            <p class="answer">Se pot folosii liniile de transport in comun sau taxi(statie la 2 min de mers ).</p>
+<p><a class="btn btn-default" href="http://www.braicar.ro/traseeabz.html" role="button"> info -TRASEE BRAICAR SA Braila </a></p>
+        </div>
+        <div class="question-group">
+          <h3>Informatii administrative pentru Garsoniera</h3>
+            <p class="question">Unde putem platii intretinerea si facturile ?</p>
+            <p class="answer">Plata intretinerii se va face la asociatia de proprietari. Program miercuri :16.00-18.00;  celelalte facturi, gaze si energie electrica, se pot platii la posta(atentie comision 1.5lei /factura ), direct la furnizori, la  punctele de plata din magazine sau online.</p>
+           
+ <p class="answer">Pot fi contactat la telefonul din CONTACT (atunci cand este afisat)sau mail:<a href="mailto:florin5231@gmail.com">florin5231@gmail.com</a></p>
+          
+  <p class="question">Se va intocmii contract la ANAF? Cine se va ocupa de formalitati? Cine se va ocupa de plata impozitelor aferente contractului de inchiriere? </p>
+            <p class="answer">Se va intocmii contract inregistrat la ANAF . Proprietarul va asigura formularele si se va ocupa de toate formalitatile inregistrarii. Plata impozitelor aferente contractului se va face de catre proprietar.</p>
+            <p class="question">Se accepta animale de companie in  garsoniera ?</p>
+            <p class="answer">In interiorul apartamentului <strong>NU SUNT ACCEPTATE </strong> animale de companiei, indiferent de marime.</p>
+        </div>
+        <div class="question-group">
+          <h3>Informatii diverse </h3>
+            <p class="question">Se face publicitate pe alte situri ?</p>
+            <p class="answer">Pentru OLX accesati lincul <a href="#">#</a>.</p>
+            <p class="answer">Pentru Publi24 accesati lincul <a href="#">#</a>.</p>
+            <p class="answer">Pentru LaJumate accesati lincul <a href="#">#</a>.</p> 
+            <p class="question">Cand pot vedea daca este disponibila aceasta garsoniera pentru o eventuala inchiriere?</p>
+           
+<p class="answer">Atunci cand in partea superioara a statusului apare cuvantul "DISPONIBILA" (in randul pe fundal de culoare rosie).</p>
+            <p class="question">Pe ce perioada poate fi inchiriata garsoniera? </p>
+            <p class="answer">Garsoniera aceasta se inchiriaza pe perioada de minim 12 luni sau multiplu de acest interval.</p>
+<p class="question">Unde se afla amplasata  garsoniera? </p>
+            <p class="answer">Garsoniera se gaseste in spatele magazinului LIDL conform hartii atasate mai jos.</p> 
+
+                  <!--harta GARSONIERA 6-->
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d518.4758902990036!2d27.95979508762001!3d45.25597848727429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sro!2sro!4v1514391433557" width="1500" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+        </div>
+    </section>
+</div>
+ 
+
+
+
+<footer>
+    <div class="wrapper">
+      <small> <strong>©2017 </strong>, Toate drepturile sunt rezervate proprietarului https://vrei-garsoniera.github.io/  </small>
+      <nav class="footer-nav">
+        <a href="#">Back to Top</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+
+ 
+
+</body>
+</html>
